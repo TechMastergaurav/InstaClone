@@ -1,17 +1,17 @@
 import { useEffect } from 'react'
 import ChatPage from './components/ChatPage'
 import Home from './components/Home'
-import LeftSidebar from './components/leftSidebar'
-import Login from './components/login'
+
+import Login from './components/Login'
 import MainLayout from './components/MainLayout'
 import Profile from './components/Profile'
-import Signup from './components/signup'
+import Signup from './components/Signup'
 import UserProfile from './components/UserProfile'
 import LandingPage from './components/LandingPage'
 import {createBrowserRouter , RouterProvider} from 'react-router-dom'
 import { io } from 'socket.io-client'
 import { useDispatch, useSelector } from 'react-redux'
-import store from './redux/store'
+
 import { setSocket } from './redux/socketSlice'
 import { setOnlineUsers } from './redux/chatSlice'
 
