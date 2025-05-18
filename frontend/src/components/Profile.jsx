@@ -29,7 +29,7 @@ function Profile() {
       const formData = new FormData();
       formData.append('bio', bio);
       if (file) formData.append('profilePicture', file);
-      const res = await axios.post('http://localhost:8000/api/v1/user/profile/edit', formData, {
+      const res = await axios.post('https://instaclone-5pre.onrender.com/api/v1/user/profile/edit', formData, {
         withCredentials: true,
         headers: { 'Content-Type': 'multipart/form-data' },
       });

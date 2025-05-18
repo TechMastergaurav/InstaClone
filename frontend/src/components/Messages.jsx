@@ -28,7 +28,7 @@ const Messages = ({ selectedUser }) => {
     try {
       setIsDeleting(true);
       const res = await axios.delete(
-        `http://localhost:8000/api/v1/message/delete/${messageId}`,
+        `https://instaclone-5pre.onrender.com/api/v1/message/delete/${messageId}`,
         { withCredentials: true }
       );
       

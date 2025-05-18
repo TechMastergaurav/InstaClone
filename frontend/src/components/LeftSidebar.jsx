@@ -7,7 +7,7 @@ import CreatePost from './CreatePost'
 import React, { useState } from 'react'
 import { toast } from 'sonner'
 import { useNavigate } from 'react-router-dom'
-import store from '@/redux/store'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { setAuthUser } from '@/redux/authSlice'
 import { setPosts, setSelectedPost } from '@/redux/postSlice'
@@ -97,7 +97,7 @@ function LeftSidebar() {
     const[open,setOpen] = useState(false);
     const logoutHandler = async() => {
         try{
-        const res = await axios.get('http://localhost:8000/api/v1/user/logout',{withCredentials:true});
+        const res = await axios.get('https://instaclone-5pre.onrender.com/api/v1/user/logout',{withCredentials:true});
         if(res.data.success){
           dispatch(setAuthUser(null))
           dispatch(setSelectedPost(null))

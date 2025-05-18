@@ -20,7 +20,7 @@ function UserProfile() {
     const fetchProfile = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`http://localhost:8000/api/v1/user/${id}/profile`, { withCredentials: true });
+        const res = await axios.get(`https://instaclone-5pre.onrender.com/api/v1/user/${id}/profile`, { withCredentials: true });
         if (res.data.success) {
           setProfile(res.data.user);
           setIsFollowing(res.data.user.followers.includes(currentUser?._id));
@@ -33,7 +33,7 @@ function UserProfile() {
     };
     const fetchPosts = async () => {
       try {
-        const res = await axios.get(`http://localhost:8000/api/v1/post/user/${id}`, { withCredentials: true });
+        const res = await axios.get(`https://instaclone-5pre.onrender.com/api/v1/post/user/${id}`, { withCredentials: true });
         if (res.data.success) {
           setPosts(res.data.posts);
         }
@@ -46,7 +46,7 @@ function UserProfile() {
   const handleFollow = async () => {
     setFollowLoading(true);
     try {
-      const res = await axios.post(`http://localhost:8000/api/v1/user/followorunfollow/${id}`, {}, { withCredentials: true });
+      const res = await axios.post(`https://instaclone-5pre.onrender.com/api/v1/user/followorunfollow/${id}`, {}, { withCredentials: true });
       if (res.data.success) {
         setIsFollowing(prev => !prev);
         setProfile(prev => ({
