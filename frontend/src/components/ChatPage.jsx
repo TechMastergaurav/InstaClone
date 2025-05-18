@@ -19,7 +19,7 @@ function ChatPage() {
   const sendMessageHandler = async (recieverId) => {
     try {
       const res = await axios.post(
-        `https://instaclone-5pre.onrender.com//api/v1/message/send/${recieverId}`,
+        `https://instaclone-5pre.onrender.com/api/v1/message/send/${recieverId}`,
         { textMessage },
         {
           headers: {
